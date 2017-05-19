@@ -7,7 +7,7 @@ def shock(channel, action):
     io.popen("python3 etgame.py " + channel + " " + action + "")
 
 def main():
-    while true:
+    while True:
         shock("-c a","-r 250")
         time.sleep( 5 )
         shock("-c a","-r 0")
