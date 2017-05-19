@@ -1,10 +1,11 @@
 #!/bin/python3
 
 import time
+import os
 
 
 def shock(channel, action):
-    io.popen("python3 etgame.py " + channel + " " + action + "")
+    os.system("python3 etgame.py " + channel + " " + action + "")
 
 def main():
     while True:
