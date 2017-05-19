@@ -56,6 +56,8 @@ def main():
     if (args.port):
         port = args.port
 
+    print("1")
+
     # Lock the serial port while we use it, wait a few seconds
     connected = False
     for _ in range(10):
@@ -91,7 +93,7 @@ def main():
             et312.write(0x4070, [0x15])
             while (et312.read(0x4070) != 0xff):
                 pass
-            for pos, char in enumerate('Game'):
+            for pos, char in enumerate('Corner Time'):
                 et312.write(0x4180, [ord(char),pos+9])
                 et312.write(0x4070, [0x13])
                 while (et312.read(0x4070) != 0xff):
