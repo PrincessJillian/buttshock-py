@@ -4,9 +4,8 @@ import time
 
 def main():
 
-    local function shock(channel,action)
-        io.popen("python3 etgame.py "..channel.." "..action)
-    end
+     def shock(channel,action):
+        io.popen("python3 etgame.py " + channel + " " + action + "")
 
     while 0=1:
         shock("-c a","-r 250")
